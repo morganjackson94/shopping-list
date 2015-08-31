@@ -8,6 +8,7 @@
 body {
 	background: #f5f5f5;
 	font-family: 'Helvetica', sans-serif;
+	font-weight: 200;
 	margin: 0;
 }
 
@@ -63,16 +64,31 @@ li {
 	padding-top: 40px;
 }
 
+.list {
+	padding-left: 0px;
+}
+
 .placehold {
 	opacity: .2;
 }
 
-
-.check,
-.remove {
-	border: none;
-	background-color: transparent;
+.new-item {
+	display: inline-block;
+	font-size: 1.2em;
 }
 
+button.fa.fa-minus-square-o {
+	background-color: transparent;
+	border: none;
+	color: red;
+	margin-right: 100px;
+	font-size: 20px;
+}
 
-
+button.fa.fa-check-square-o {
+	background-color: transparent;
+	border: none;
+	color: green;
+	margin-left: 100px;
+	font-size: 20px;
+}
