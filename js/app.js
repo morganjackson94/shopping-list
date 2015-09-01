@@ -1,47 +1,55 @@
-//user inputs list item
-var newItem = $('.item');
+$(document).ready(function() {
 
-function addItem() {
-	console.log("add item");
-	var list = $('.list');
-	var item = $('<li><button class="fa fa-minus-square-o"></button><span class="new-item">' + write + '</span><button class="fa fa-check-square-o"></button></li>');
-	var placeholder = $('.placehold');
+	console.log('ready!');
 
-	if (write.length === 0) {
-		return false;
+
+	var form = $('form');
+	var newItem = $('.textfield').val();
+
+
+	//user inputs list item
+	function addItem() {
+		console.log("add item");
+
+		var newListItem = $('<li><button class="fa fa-minus-square-o delete"></button><span class="new-item">' + newItem + '</span><button class="fa fa-check-square-o"></button></li>');
+
+
+		if (newItem.length === 0) {
+			console.log('empty text')
+			return false;
+		}
+
+		$('.placehold').hide();
+		$('ul.list').append(newListItem);
+		$(newItem).val('');
+
 	}
 
-	placeholder.remove();
-	list.append(item);
-	$(newItem).val('');
+	//user removes list item
+	$('ul.list').on('click', '.delete', function() {
+		console.log(this);
+		$(this).parent().remove();
+	});
 
-}
+	//user removes list item
+	// list.on('click', del, deleteItem);
 
-function deleteItem() {
-	$(this).remove();
-}
+	//user adds list item by pressing enter
+		form.on('submit', function(e) {
+			e.preventDefault();
+			newItem = $('.textfield').val();
+	    console.log(newItem);
+	    addItem();
+	  });
 
-
-$(function() {
-	var newItem = $('.item');
-	var minus = $('<button class="fa fa-minus-square-o">');
-	var list = $('.list');
-
-
-//user removes list item
-	list.on('click', minus, deleteItem);
-
-//user adds list item by pressing enter
-	newItem.on('submit', function(e) {
-		var write = $('.item').val();
-    	e.preventDefault();
-       	addItem();
-    })
 });
 
 
-// jquery submit 
 
-	
-	
+
+
+// jquery submit
+
+
+
 	//user completes list item
