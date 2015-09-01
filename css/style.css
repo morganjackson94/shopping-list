@@ -1,8 +1,10 @@
 .container {
-	width: 60%;
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
+  width: 60%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 900px;
+  min-width: 320px;
 }
 
 body {
@@ -42,7 +44,7 @@ h2 {
 	box-shadow: 2px 2px 2px #C4C4C4;
 }
 
-.item {
+.textfield {
 	text-align: center;
 	background-color: transparent;
 	border: 1px dashed #B8B8B8;
@@ -54,14 +56,18 @@ h2 {
 }
 
 li {
-	list-style: none;
+    list-style: none;
+    overflow: auto;
+    width: 75%;
+    margin: 0 auto 8px;
 }
 
 .list-container {
-	background-color: #fff;
-	box-shadow: 2px 2px 2px #C4C4C4;
-	height: 52vh;
-	padding-top: 40px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #C4C4C4;
+    min-height: 52vh;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .list {
@@ -83,6 +89,7 @@ button.fa.fa-minus-square-o {
 	color: red;
 	margin-right: 100px;
 	font-size: 20px;
+	float: left;
 }
 
 button.fa.fa-check-square-o {
@@ -91,4 +98,5 @@ button.fa.fa-check-square-o {
 	color: green;
 	margin-left: 100px;
 	font-size: 20px;
+	float: right;
 }
