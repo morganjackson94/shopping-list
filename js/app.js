@@ -11,7 +11,7 @@ $(document).ready(function() {
 	function addItem() {
 		console.log("add item");
 
-		var newListItem = $('<li><button class="fa fa-minus-square-o delete"></button><span class="new-item">' + newItem + '</span><button class="fa fa-check-square-o"></button></li>');
+		var newListItem = $('<li><button class="fa fa-minus-square-o delete"></button><span class="new-item">' + newItem + '</span><button class="fa fa-check-square-o complete"></button></li>');
 
 
 		if (newItem.length === 0) {
@@ -27,12 +27,15 @@ $(document).ready(function() {
 
 	//user removes list item
 	$('ul.list').on('click', '.delete', function() {
-		console.log(this);
 		$(this).parent().remove();
 	});
 
-	//user removes list item
-	// list.on('click', del, deleteItem);
+	$('ul.list').on('click', '.complete', function() {
+		console.log(this);
+		$(this).parent().fadeOut( "slow", function() {
+			console.log(this);
+		});
+	});
 
 	//user adds list item by pressing enter
 		form.on('submit', function(e) {
