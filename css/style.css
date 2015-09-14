@@ -9,7 +9,7 @@
 
 body {
 	background: #f5f5f5;
-	font-family: 'Helvetica', sans-serif;
+	font-family: 'Walter Turncoat', cursive;
 	font-weight: 200;
 	margin: 0;
 }
@@ -38,7 +38,7 @@ h2 {
 
 
 .main {
-	background-color: #fff;
+	background: #fff;
 	padding: 10px;
 	border-bottom: 5px solid #f5f5f5;
 	box-shadow: 2px 2px 2px #C4C4C4;
@@ -59,11 +59,12 @@ li {
     list-style: none;
     overflow: auto;
     width: 75%;
-    margin: 0 auto 8px;
+    margin: 0 auto 10px;
 }
 
 .list-container {
-    background-color: #fff;
+    background: url('http://4.bp.blogspot.com/-tRopCPSe4h4/TydMn-jaXdI/AAAAAAAAAQ4/IQW4Ftb-PHo/s1600/Notebook%2BPaper%2B2.jpg');
+    background-size: 850px 490px;
     box-shadow: 2px 2px 2px #C4C4C4;
     min-height: 52vh;
     padding-top: 40px;
