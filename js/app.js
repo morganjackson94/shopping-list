@@ -19,12 +19,13 @@ $(document).ready(function() {
 
 		$('.placehold').hide();
 		$('ul.list').append(newListItem);
-		$(newItem).val("");
+		$(newItem).val('');
 
 	}
 
 	//user removes list item
 	$('ul.list').on('click', '.delete', function() {
+		alert("Are you sure you want to remove this item?");
 		$(this).parent().remove();
 	});
 
