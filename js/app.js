@@ -1,11 +1,10 @@
 $(document).ready(function() {
 
-	console.log('ready!');
-
+	
 
 	var form = $('form');
 	var newItem = $('.textfield').val();
-
+	
 
 	//user inputs list item
 	function addItem() {
@@ -31,7 +30,6 @@ $(document).ready(function() {
 	});
 
 	$('ul.list').on('click', '.complete', function() {
-		console.log(this);
 		$(this).parent().fadeOut( "slow", function() {
 			console.log(this);
 		});
