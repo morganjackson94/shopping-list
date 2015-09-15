@@ -9,7 +9,7 @@ $(document).ready(function() {
 	function addItem() {
 		console.log("add item");
 
-		var newListItem = $('<li><button class="fa fa-minus-square-o delete"></button><span class="new-item">' + newItem + '</span><button class="fa fa-check-square-o complete"></button></li>');
+		var newListItem = $('<li class="animated fadeInUp"><button class="fa fa-minus-square-o delete"></button><span class="new-item">' + newItem + '</span><button class="fa fa-check-square-o complete"></button></li>');
 
 
 		if (newItem.length === 0) {
@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 		$('.placehold').hide();
 		$('ul.list').append(newListItem);
-		$(newItem).val('');
+		$(newItem).val("");
 
 	}
 
