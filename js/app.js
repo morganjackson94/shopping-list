@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 	
-
 	var form = $('form');
 	var newItem = $('.textfield').val();
 	
